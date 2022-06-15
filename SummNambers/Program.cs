@@ -6,22 +6,26 @@ namespace SummNambers
     {
         static void Main(string[] args)
         {
-            Random rand = new Random();
+            Random random = new Random();
             int minValue = 0;
             int maxValue = 101;
-            int number = rand.Next(minValue, maxValue);
-            int summ = 0;
+            int multipleNumber1 = 3;
+            int multipleNumber2 = 5;
+            int number = random.Next(minValue, maxValue);
+            int sum = 0;
 
             Console.WriteLine($"Случайное число : {number}");
-            for (int i = 0; i < number; i++)
+
+            for (int i = 0; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % multipleNumber1 == 0 || i % multipleNumber2 == 0)
                 {
-                    summ += i;
+                    sum += i;
                     Console.Write($"{i} ");
                 }
             }
-            Console.WriteLine($"\nСумма всех чисел которые кратные 3 или 5 = {summ}");
+
+            Console.WriteLine($"\nСумма всех чисел которые кратные 3 или 5 = {sum}");
         }
     }
 }
